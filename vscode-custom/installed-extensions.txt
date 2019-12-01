@@ -1,0 +1,10 @@
+// extensions
+* Sublime Text Keymap and Settings Importer
+* Code Spell Checker
+
+// linter configuration files:
+//
+
+// Custom configuration file location
+C:\Users\[USER]\AppData\Roaming\Code\User\settings.json     // theme colors
+C:\Users\[USER]\AppData\Roaming\Code\User\keybindings.json  // key bindings

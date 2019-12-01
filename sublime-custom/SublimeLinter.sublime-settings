@@ -1,0 +1,26 @@
+// SublimeLinter Settings - User
+{
+	"debug": true,
+	"linters": {
+		"jshint" : {
+			"disable": false,
+			"excludes": "*.ejs",
+			"args":[
+				"--config", "D:\\software\\util\\sublimeCustom\\jshint.conf"
+			]
+		},
+		"htmlhint" : {
+			"disable": false,
+			"excludes": "*.php",
+			"args":[
+				"--config", "D:\\software\\util\\sublimeCustom\\htmlhint.conf"
+			]
+		},
+		"eslint": {
+			"disable": true,
+			"args":[
+				"--config", "D:\\software\\util\\sublimeCustom\\eslint.conf"
+			]
+		}
+	}
+}

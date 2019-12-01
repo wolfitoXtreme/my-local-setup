@@ -1,0 +1,42 @@
+{
+	"auto_indent": true,
+	"bold_folder_labels": false,
+	"color_scheme": "Packages/User/WOLFITO-DARK.tmTheme",
+	"detect_indentation": true,
+	"draw_white_space": "all",
+	"fade_fold_buttons": false,
+	"font_size": 11,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		4,
+		8,
+		12,
+		16,
+		20,
+		24,
+		28,
+		32,
+		36,
+		40,
+		44,
+		48,
+		52,
+		56,
+		60,
+		64,
+		68,
+		72,
+		76,
+		80
+	],
+	"smart_indent": true,
+	"spell_check": true,
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": true,
+	"word_wrap": false
+}

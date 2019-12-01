@@ -1,0 +1,523 @@
+// jshint ignore: start
+
+// Current Global Dependencies
+// ---------------------------------------
+	node					v10.15.3    // node
+                            //v8.15.1 	
+							//v6.11.2	
+	nodemon					1.18.10 	// node
+	npm 					6.1.0 		// node
+	gulp					3.9.1 		// node
+	jshint					2.9.5		// sublime
+	htmlhint				0.9.13 		// sublime
+	eslint					5.15.3		// sublime
+	create-react-app		2.1.8		// react
+	typescript				3.3.4000	// typescript
+							// 2.1.5
+
+
+//////////////////////////
+// SUBLIME
+//////////////////////////
+
+	---------------------------------------
+	SUBLIME - REG EX
+	---------------------------------------
+	[string([^']*)] -> finds 'string...'
+	 \1 -> captuting group (for replacements)
+	
+	[class="([^"]*)"] -> finds 'attribute class and contents'
+
+
+	[ctrl+shift+d] -> duplicate_line
+	'lorem' + [tab] -> Small dummy text
+
+	clear console hack
+	$ print('\n'*100) // inside the console
+
+
+	---------------------------------------
+	SUBLIME - EXCLUDE FOLDER
+	---------------------------------------
+	C:/projects/fontemventures/demandware1/, -*/node_modules/* -> will exclude node_modules
+
+	---------------------------------------
+	SUBLIME - HTML BOILERPLATE 
+	---------------------------------------
+	type html + tab (documment syntax should be HTML)
+	* works with any tag
+
+	---------------------------------------
+	SUBLIME - HTML DUPLICATE 
+	---------------------------------------
+	hit  ctr + shift + D to duplicate a line, if the cursor is placed at its end, or to duplicate a code block if the whole block is selected.
+
+	---------------------------------------
+	SUBLIME - SEARCH EXCLUDE FOLDER
+	---------------------------------------
+	-*/name_of_dir/*
+
+	---------------------------------------
+	SUBLIME - COMMANDS
+	---------------------------------------
+	ctrl+↵				Insert line after
+	shift+ctrl+↵		Insert line before
+	shift+ctrl+UP		Move line/selection up
+	shift+ctrl+DOWN		Move line/selection down
+	ctrl+L				Select line - Repeat to select next lines
+	ctrl+D				Select word - repeat select other occurrences
+	ctrl+M				Go to matching parentheses
+	shift+ctrl+M		Select all contents of the current parentheses
+	ctrl+J				Join line below to the end of the current line
+	ctrl+shift+W		wrap selected text into tag
+
+//////////////////////////
+// VISUAL STUDIO CODE
+//////////////////////////
+
+	---------------------------------------
+	VSCODE - COMMANDS
+	---------------------------------------
+	alt+click			Multiple insertion points
+	ctrl+k, ctrl+u		Convert to uppercase
+	ctrl+k, ctrl+l		Convert to lowercase
+	shift+ctrl+RIGHT	Select word by word
+
+//////////////////////////
+// SASS
+//////////////////////////
+
+	---------------------------------------
+	SASS - TERNARY OPERATOR
+	---------------------------------------
+	padding: if($condition,  0 prem(3px) 0 0, 0 0 0 prem(3px));
+
+	---------------------------------------
+	SASS - NOT
+	---------------------------------------
+	padding-#{not($value)}: 0;
+
+	---------------------------------------
+	SASS - VARIABLE EXIST
+	---------------------------------------
+	@if(variable-exists(static-content) == true) { }
+
+
+//////////////////////////
+// COMMAND LINE 
+//////////////////////////
+	
+	------------------------------------
+	Basic commands
+	------------------------------------
+	$ ls 					list files, will list files inside directories If path is provided
+	$ ls -a					list files, including hidden directories
+	$ cd .. 				change directory
+	$ touch 				creates file
+	$ any letter + [tab] 	complete With existing files directories
+	$ mkdir					creates directory
+	$ rm 					removes file
+	$ rm -rf				removes directories and content within rm
+	$ clear					clears the console
+
+	---------------------------------------
+	NODE
+	---------------------------------------
+	$ node 									Node command Line
+	$ ctrl + c (twice) 						Exits CLI
+	$ node <filename> 						Executes file
+	$ export <<VAR NAME>>=<<VAR VALUE>>		Exports global ENV variable 
+											(ex. export DATABASEURL=http://databaseurl/)
+	$ taskkill -F -IM node.exe              Kill server process
+
+	---------------------------------------
+	NPM
+	---------------------------------------
+	$ npm install 							installs npm package.json dependencies
+	$ npm install <<package>>@<<version>>	installs npm package specific version
+	$ npm uninstall <<package>>				uninstalls npm package
+	$ npm prune								Updates package.json installed packages list
+	$ npm list <<package name>>				Package name + version
+	$ npm list -g 							List Global packages
+	$ npm list --depth=0					Lists manually installed packages
+	$ npm cache clear --force 				Clears NPM cache
+	$ npm uninstall -g <<package>>			uninstall package globally
+	$ npm outdated 							list outdated packages
+	$ npm update <<package>>				update package
+	$ npm start 							Starts application from package.json start property key
+	$ npm run <<script>>					Runs installed script property of a package.json
+
+	---------------------------------------
+	TYPESCRIPT
+	---------------------------------------
+	$ tsc <filename.ts>					compiles to .js file
+	$ tsc --init						creates config .json file for compiling all .ts files found running $ tsc
+	$ tsc -w							compile and watch for changes
+	$tsc <file.ts> --watch				watch particular file
+	$ tsc -t <JS VERSION: Ex. ES5>		compile to target JS version
+	$tsc --outFile <file.js> <files.ts>	compile to one single file plus files that should be bundled
+	$tsc <file.ts> --outFile <file.js> 	compile to and from one single file  
+	$tsc --experimentalDecorators		Allows use of experimental decorators
+
+	---------------------------------------
+	CREATE-REACT-APP
+	---------------------------------------	
+	$ create-react-app . --scripts-version=react-scripts-ts				Creates a React App using TypeScript. "." uses current folder.
+
+//////////////////////////
+// WEBPACK
+/////////////////////////
+
+	------------------------------------
+	Basic commands
+	------------------------------------
+	
+
+//////////////////////////
+// DEMANDWARE
+//////////////////////////
+	------------------------------------
+	DEMANDWARE - SENDING ORDER EMAILS
+	------------------------------------
+	- Merchant Tools >  Ordering >  Orders > {Order ID}
+
+	------------------------------------
+	DEMANDWARE - Adding reserved characters
+	------------------------------------
+	${'#'}
+
+	------------------------------------
+	DEMANDWARE - Pdict Variables
+	------------------------------------
+	Pipeline variables are defined in the controller that renders any given page.
+
+	In BM is found in:
+	Merchant Tools >  Site URLs >  URL Rules > Pipeline URLs
+
+	IE. Alias: profile  Pipeline: Account-EditProfile
+
+	- The alias is the last string in the site URL
+	- The part of the Pipeleine string before the dash is the actual file controller
+	- The part of the Pipeleine string after the dash is the function that renders that particular page.
+
+	Inside the above mentioned function there will be following method that holds the pdict variables, or where they cab be defined:
+
+	app.getView({
+		varName: value
+	}).render('account/password/setnewpassword');
+
+	---------------------------------------
+	DEMANDWARE - REMOVE CHACHE
+	---------------------------------------
+	Administration >  Sites >  Manage Sites > FR - General
+
+	---------------------------------------
+	DEMANDWARE - ASSIGN PRODUCTS TO A CATEGOY - MAKE CATEGORY VISIBLE
+	---------------------------------------
+	- Merchant Tools >  Products and Catalogs >  Catalogs > PMI Storefront Catalog FR > Store > Heets
+		[x] - Online
+	- Merchant Tools >  Products and Catalogs >  Catalogs > PMI Storefront Catalog FR > Store > Heets > Category Attributes
+		[x] - Show in Menu Navigation
+	- Merchant Tools >  Products and Catalogs >  Products > M0301-PCE-FR - General (Product)
+		- [x] (Product) -> assign
+		- [x] (Category) -> Next
+		- Classification Category: (Category)		 
+		- Primary Category: (Category)
+		- Finish: Return to Products > >
+
+
+	--------------------------------------
+	DEMANDWARE - EXPORT CUSTOM PREFERENCES
+	---------------------------------------
+	- Site imnport and export -> choose file name -> browse tree -> click on sitepreferences -> export
+
+	--------------------------------------
+	DEMANDWARE - PDICT VARIABLES
+	---------------------------------------
+	templates/default/util/modules.isml
+
+	- <iscomment>renders order details</iscomment>
+		<ismodule template="components/order/orderdetails"
+			name="orderdetails"
+			attribute="order"
+			attribute="orderstatus"
+		/>
+
+
+	---------------------------------------
+	DEMANDWARE - CONDITIONALS SHORTHAND
+	---------------------------------------
+	<ul class="${subCatLayout.horizontal ? 'menu-h' : 'menu-v'}">
+
+	------------------------------------
+	DEMANDWARE - GENERATE STATIC URL
+	------------------------------------
+	URLUtils.absStatic('/css/paynext.css')
+
+	--------------------------------------
+	DEMANDWARE - FORCE DECORATION TEMPLATE
+	---------------------------------------
+	<iscontent type="text/html" charset="UTF-8" compact="true"/>
+	<isset name="DecoratorTemplate" value="content/content/pt_content" scope="page"/>
+
+	<iscomment>Use another decorator if the context is the content search</iscomment>
+	<isif condition="${!empty(pdict.ContentSearchResult) && pdict.ContentSearchResult.count > 0}">
+		<isset name="DecoratorTemplate" value="search/pt_contentsearchresult" scope="page"/>
+	</isif>
+
+	<isif condition="${pdict.CurrentHttpParameterMap.format.stringValue == 'ajax'}">
+		<isset name="DecoratorTemplate" value="util/pt_empty" scope="page"/>
+	</isif>
+
+
+	--------------------------------------
+	DEMANDWARE - URL TRIGGER
+	---------------------------------------
+	URL TRIGGER: 
+	Static Page:
+	<a href="$url('Page-Show','cid','privacy-policy', 'format', 'ajax')$">
+
+	Category page:
+	<a href="$url('Search-Show', 'cgid', 'accessories')$" class="button button-dark js-smgc-carousel-btn">구매하기</a>
+
+	* To obtain url ID go to: Merchant Tools >  Site Preferences >  Storefront URL and disable "Enable Storefront URLs"
+
+	--------------------------------------
+	DEMANDWARE - URL INSIDE CONTENT ASSET
+	---------------------------------------
+	$url('Stores-Find')$
+
+	--------------------------------------
+	DEMANDWARE - SOMETHING ELSE
+	---------------------------------------
+	<link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY, null, 'css/content.css').toString()}" type="text/css"/>
+
+	then just upload the file in (shared) library : 
+	\library\static\default\css
+
+	------------------------------------
+	DEMANDWARE - ADDING CONTENT ASSET TO LIBRARY
+	------------------------------------
+	1. In BM, Merchant tools > Content > Import and export > Exports (the link under the libraries title)
+	2. Select the library you want to export. e.g FR_Library
+	3. Add a name to the Export file field. eg. content.xml
+	4. Hit Finish
+	5. File will be created, click the link to download it (its an obvious link)
+	Then, copy the asset into the correct library file
+	and commit
+	you can / should also test it, but deleting the asset, and doing another site import
+	then your changes should be there again
+
+	------------------------------------
+	DEMANDWARE - ERROR LOGS
+	------------------------------------
+	Administration >  Site Development >  Development Setup
+
+	------------------------------------
+	DEMANDWARE - TOOLKIT
+	------------------------------------
+	site > Merchant Tools > SitePreferences > Storefront Toolkit.
+
+	------------------------------------
+	DEMANDWARE - SITE CACHE
+	------------------------------------
+	Administration >  Sites >  Manage Sites > FR - Cache
+
+	------------------------------------
+	DEMANDWARE - LOCALIZATION FILE (Languages)
+	------------------------------------
+	locale.properties
+
+	------------------------------------
+	DEMANDWARE - REMOVE CONTENT ASSET WRAPPER
+	------------------------------------
+	<iscontentasset aid="terms-pop-up" localinclude="${true}" />
+
+	------------------------------------
+	DEMANDWARE - BASKET SESSION TIME
+	------------------------------------
+	Merchant Tools >  Site Preferences >  Baskets
+
+	------------------------------------
+	DEMANDWARE - INPUT FIELD CLASSES
+	------------------------------------
+	inputField.js -> xhtml class
+
+
+//////////////////////////
+// GIT
+//////////////////////////
+
+	---------------------------------------
+	GIT - BASIC COMMANDS
+	---------------------------------------
+	$ git 											Initialize repository
+	$ git status									Shows status
+	$ git add .										Add all files
+	$ git add <file>								Adds specified file
+	$ git commit -m "message"						Commits file with specified message (In present tense)
+	$ git log 										gets repository history
+	$ q 											exits gits viewer
+	$ git checkout									checkout
+	$ git checkout <commit id>						checkouts particular commit
+	$ git checkout master 							checkouts master
+	$ git revert --no-commit <commit id>..HEAD		Reverts repository to specified commit,
+													without deleting other commits
+
+	------------------------------------
+	GIT - Rebasing ignoring spaces
+	------------------------------------
+	$ git checkout [Destination Branch]
+	$ git pull --all
+	$ git checkout [source Branch]
+	$ git rebase -i -Xignore-space-change origin/[Destination Branch]
+	$ git push -f origin [source Branch]
+		--> Pull request
+
+
+	git diff --stat --cached origin/master
+
+	------------------------------------
+	GIT - Init config
+	------------------------------------
+	$git config --global push.default simple
+	$git config --global pull.rebase true
+
+	--------------------------------------
+	GIT - UPDATING FROM 'MASTER'
+	---------------------------------------
+	$git checkout [destination brach]
+	$git merge master
+
+	press "i"
+	write your merge message
+	press "esc"
+	write ":wq"
+	then press enter
+
+	--------------------------------------
+	GIT - FEATURE BRANCH UPDATE
+	---------------------------------------
+	First STOP GRUNT!!!
+
+	$ git checkout develop
+		Checking out files: 100% (1054/1054), done.
+		Switched to branch 'develop'
+		Your branch is up-to-date with 'origin/develop'.
+
+	$ git pull
+		Current branch develop is up to date.
+
+	$ git checkout feature/PMI-2657-arabic-rtl-front-end-changes
+		Switched to branch 'feature/PMI-2657-arabic-rtl-front-end-change
+		Your branch is up-to-date with 'origin/feature/PMI-2657-arabic-rtl-front-end-changes'.
+
+	$ git rebase (Bhimal recommend merge)
+		--> conflicts will appear
+		  --> use "resolve using mine" when files haven't been modified  -> $ git rebase --skip
+		--> use "add" when resolving conflicts -> $ git rebase --continue
+
+	$ git push --force-with-lease
+
+	// after rebase
+	$ git push -f
+	
+	--------------------------------------
+	GIT - RENAMING FILES
+	---------------------------------------
+	* files are renamed using the git mv command
+
+	------------------------------------
+	GIT - REMOVE COMMITS FROM QUEUE
+	------------------------------------
+	$ git reset HEAD --hard (option 1)
+	$ git reset HEAD~ (option 2)
+	$ git reset --hard origin/<<origin branch>> (option 3)
+
+	------------------------------------
+	GIT - LIST/VIEW STASHES
+	------------------------------------
+	$ git stash list // list stashes
+	$ git stash show -p // last stash contents
+	$ git stash show -p stash@{stash number} // specific stash contents
+	$ git stash drop stash@{n} // removes specific stash
+	$ git stash drop // removes all stashes
+
+	------------------------------------
+	GIT - Solving conflicts after Pull Request
+	------------------------------------
+	$ git branch // list of branches
+	$ git checkout development // or whatever the origin branch was
+	$ git pull // to update source branch
+	$ git checkout -b <<local fix branch name>> // create a temporary branch from the updated source one
+	$ git checkout <<conflict branch>>
+	$ git merge <<local fix branch name>>
+
+	// solve conflicts
+	$ git add <<conflicted file>>
+	$ git commit -m "<<fix commit name>>"
+	$ git push
+
+	------------------------------------
+	GIT - Renaming a remote branch from local one
+	------------------------------------
+	rename the local branch to the new name
+	$ git branch -m <old_name> <new_name>
+
+	delete the old branch on remote - where <remote> is eg. origin
+	$ git push origin --delete <old_name>
+
+	push the new branch to remote
+	$ git push origin <new_name>
+
+	------------------------------------
+	GIT - Remove last commit from remote (preferably feature/bugfix branches)
+	------------------------------------
+	$ git reset --hard <previous commit ID> // local branch will be one behind
+	$ git push --force
+
+
+//////////////////////////
+// MONGO 
+//////////////////////////
+	
+	------------------------------------
+	Basic commands
+	------------------------------------
+	mongod					- Starts 'mongo' daemon process
+	mongod --dbpath <path>	- Starts 'mongo' daemon process with data specified path
+	mongo					- Starts 'mongo' client
+	help					- Shows help
+	show dbs				- List existing data bases
+	show collections		- List existing collections within data base in use
+	use						- Uses or creates a database to work with
+							  * When new db is created won't be listed till data is stored
+	insert					- Inserts entries into the db. ex: db.dogs.insert({name:"Marley",type:"Perrito Asesino"})
+	find					- Finds entries. 
+							  ex: db.dogs.find() <<Finds all entries>>
+							  ex: db.dogs.find({key:"value"}) <<Finds key/value matching pair>>
+	pretty					- shows formatted text
+							  ex: db.dogs.find().pretty()
+	update					- Updates entries
+							  ex: db.dogs.update({key:"value"},{$set:{keyB:"valueB"}}) <<updates key/value matching pair, and adds keyB/valueB pair to that entry>>
+	deleteMany				- Removes entries
+							  ex: db.dogs.deleteMany({name:"Marley",...}) <<Removes key/value matching pair >>
+	drop					- Removes entire collection from database
+	remove 					- Removes contents inside a collection. ex: db.mycoll.remove({query here})
+
+
+//////////////////////////
+// HEROKU 
+//////////////////////////
+	
+	------------------------------------
+	Basic commands
+	------------------------------------
+	$ heroku login					log inyo heroku
+	$ heroku login -i 				log inyo heroku interactive
+	$ heroku create					sends repository to Heroku server
+	$ heroku remote -v				Gets remote repository version
+	$ git push heroku master		Pushes all commited changes to Heroku
+	$ heroku logs					To get logs and errors
+	$ heroku run <command>			Runs CLI commands on Horoku server
+	$ heroku config:set <VAR_NAME>	Sets global environment variable
