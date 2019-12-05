@@ -3,7 +3,7 @@
 // Current Global Dependencies
 // ---------------------------------------
 	node					v10.15.3    // node
-                            //v8.15.1 	
+							//v8.15.1 	
 							//v6.11.2	
 	nodemon					1.18.10 	// node
 	npm 					6.1.0 		// node
@@ -102,6 +102,31 @@
 	---------------------------------------
 	@if(variable-exists(static-content) == true) { }
 
+//////////////////////////
+// MAC OS
+//////////////////////////
+
+	---------------------------------------
+	MAC OS - COMMANDS
+	---------------------------------------
+	command+w                           closes active window
+	command+y			                quick view on finder
+	command+,			                current application preferences
+	command+option+m	                minimizes all current application windows
+	command+option+click(desktop)		Shows desktop
+	command+F3                  		Shows desktop
+	command+space                       Shows Finder
+	command+l                           Browser focus on address bar
+	command+tab                         Switch between applications
+	command+option+d                    Shows/hides dock menu
+	command+`                           Switch between application windows
+	crl+tab                             Switch between application tabs
+	command+option+m                    Force quit applications
+	command+q                           Quit application
+	command+shift+q                     Shutdown
+	command+ctrl+q                      Lock computer
+	command+shift+.                     Show hidden files
+
 
 //////////////////////////
 // COMMAND LINE 
@@ -163,6 +188,14 @@
 	CREATE-REACT-APP
 	---------------------------------------	
 	$ create-react-app . --scripts-version=react-scripts-ts				Creates a React App using TypeScript. "." uses current folder.
+
+	---------------------------------------
+	HOMEBREW
+	---------------------------------------
+	$ brew search <program name>			search a program to install
+	$ brew install cask <program name>		installs a program with UI
+	$ brew install <program name>			installs a program without UI (ex. NodeJS)
+
 
 //////////////////////////
 // WEBPACK
@@ -364,6 +397,7 @@
 	$ git revert --no-commit <commit id>..HEAD		Reverts repository to specified commit,
 													without deleting other commits
 
+
 	------------------------------------
 	GIT - Rebasing ignoring spaces
 	------------------------------------
@@ -443,6 +477,10 @@
 	$ git stash drop stash@{n} // removes specific stash
 	$ git stash drop // removes all stashes
 
+    $ git stash <message>                           To stash with message
+    $ git stash list                                list stashes
+    $ git pop <stash id>                            Applies specific stash
+
 	------------------------------------
 	GIT - Solving conflicts after Pull Request
 	------------------------------------
@@ -475,6 +513,29 @@
 	------------------------------------
 	$ git reset --hard <previous commit ID> // local branch will be one behind
 	$ git push --force
+
+	------------------------------------
+	GIT - Changing commit description
+	------------------------------------
+    // For remote commits
+    Get a list of the 3 most recent commits
+    $ git rebase -i HEAD~3
+    To change initial commit 
+    $ git rebase -i --root
+
+    -> Replace 'pick' with 'reword' before commit id number.
+    -> Save commit list file
+    -> Change the commit message
+    $ git --push force
+
+
+    // For local commits
+    $git commit --amend 
+	press "i"
+	Edit the commit message
+	press "esc"
+	write ":wq"
+	then press enter
 
 
 //////////////////////////
