@@ -7,3 +7,6 @@
 *.rar
 *.tar
 *.zip
+
+# system specific
+.DS_Store
