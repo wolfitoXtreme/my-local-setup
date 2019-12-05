@@ -126,6 +126,8 @@
 	command+shift+q                     Shutdown
 	command+ctrl+q                      Lock computer
 	command+shift+.                     Show hidden files
+	command+r                           Refresh
+	command+shift+r                     Refresh clearing cache
 
 
 //////////////////////////

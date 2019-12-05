@@ -41,22 +41,24 @@
         "scrollbarSlider.activeBackground": "#3e3e3c",
         "scrollbarSlider.hoverBackground": "#3e3e3c",
         "editor.background": "#0a0a08",
-        "editor.foreground": "#d7d7d7",
+        "editor.foreground": "#ebebeb",
         "editorLineNumber.foreground": "#7e7e7e",
         "editorLineNumber.activeForeground": "#ffffff",
         "editor.lineHighlightBackground": "#2f2f2d",
         "editorCursor.foreground": "#ffffff",
+        "editorWhitespace.foreground": "#5f5b5b",
         "editorGutter.background": "#030303",
-        "editorRuler.foreground": "#141414",
+        "editorRuler.foreground": "#3f3e3e",
         "breadcrumb.foreground": "#7e7e7e",
         "breadcrumb.background": "#000000"
-    },
+    }, 
     "workbench.statusBar.visible": true,
     "editor.minimap.enabled": false,
     "[javascript]": {},
-    "workbench.colorTheme": "Visual Studio Dark",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "git.autoRepositoryDetection": false
+    "git.autoRepositoryDetection": false,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Visual Studio Dark"
 }
 
