@@ -24,7 +24,7 @@
 	SUBLIME - REG EX
 	---------------------------------------
 	[string([^']*)] -> finds 'string...'
-	 \1 -> captuting group (for replacements)
+	 \1 -> capturing group (for replacements)
 	
 	[class="([^"]*)"] -> finds 'attribute class and contents'
 
@@ -39,12 +39,12 @@
 	---------------------------------------
 	SUBLIME - EXCLUDE FOLDER
 	---------------------------------------
-	C:/projects/fontemventures/demandware1/, -*/node_modules/* -> will exclude node_modules
+	C:/projects/folder/subfolder/, -*/node_modules/* -> will exclude node_modules
 
 	---------------------------------------
 	SUBLIME - HTML BOILERPLATE 
 	---------------------------------------
-	type html + tab (documment syntax should be HTML)
+	type html + tab (document syntax should be HTML)
 	* works with any tag
 
 	---------------------------------------
@@ -120,27 +120,28 @@
 	---------------------------------------
 	MAC OS - COMMANDS
 	---------------------------------------
-	⌘+w                     closes active window
-	⌘+y                     quick view on finder
-	⌘+,                     current application preferences
-	⌘+⌥+m	                minimizes all current application windows
-	⌘+⌥+click(desktop)      Shows desktop
-	⌘+F3                    Shows desktop
-	⌘+space                 Shows Finder
-	⌘+l                     Browser focus on address bar
-	⌘+tab                   Switch between applications
-	⌘+⌥+d                   Shows/hides dock menu
-	⌘+`                     Switch between application windows
-	crl+tab                 Switch between application tabs
-	⌘+⌥+m                   Minimize all application windows
-    ⌘+⌥+escape              Force quit applications
-	⌘+q                     Quit application
-	⌘+shift+q               Shutdown
-	⌘+ctrl+q                Lock computer
-	⌘+shift+.               Show hidden files
-	⌘+r                     Refresh
-	⌘+shift+r               Refresh clearing cache
-    ⌘+shift+4               Takes a screenshot
+	⌘+w                             closes active window
+	⌘+y                             quick view on finder
+	⌘+,                             current application preferences
+	⌘+⌥+m	                        minimizes all current application windows
+	⌘+⌥+click(desktop)              Shows desktop
+	⌘+F3                            Shows desktop
+	⌘+space                         Shows Finder
+	⌘+l                             Browser focus on address bar
+	⌘+tab                           Switch between applications
+	⌘+⌥+d                           Shows/hides dock menu
+	⌘+`                             Switch between application windows
+	crl+tab                         Switch between application tabs
+    ⌘+⌥+escape                      Force quit applications
+	⌘+q                             Quit application
+	⌘+shift+q                       Shutdown
+	⌘+ctrl+q                        Lock computer
+	⌘+shift+.                       Show hidden files
+	⌘+r                             Refresh
+	⌘+shift+r                       Refresh clearing cache
+    ⌘+shift+4                       Takes a screenshot
+    selection + mouse drag + ⌥      Copies selected text
+
 
 //////////////////////////
 // COMMAND LINE 
@@ -209,7 +210,8 @@
 	$ brew search <program name>			search a program to install
 	$ brew install cask <program name>		installs a program with UI
 	$ brew install <program name>			installs a program without UI (ex. NodeJS)
-
+    $ brew list                             List installed apps
+    $ brew list cask                        List installed apps with UI
 
 //////////////////////////
 // WEBPACK
