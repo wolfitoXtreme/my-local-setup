@@ -78,10 +78,21 @@
 	---------------------------------------
 	VSCODE - COMMANDS
 	---------------------------------------
-	alt+click			Multiple insertion points
-	ctrl+k, ctrl+u		Convert to uppercase
-	ctrl+k, ctrl+l		Convert to lowercase
-	shift+ctrl+RIGHT	Select word by word
+	alt+click			        Multiple insertion points
+	ctrl+k, ctrl+u		        Convert to uppercase
+	ctrl+k, ctrl+l		        Convert to lowercase
+	shift+ctrl+RIGHT	        Select word by word
+    ctrl+shift+[                Collapses region
+    ctrl+shift+]                Expands region
+    
+    // MAC OS
+    ⌘+⌥+[                       Collapses region
+    ⌘+⌥+]                       Expands region
+    ⌘+⌥+↑                       Inserts cursor above selection
+    ⌥+shift+↑                   Duplicates line up
+    ⌥+shift+↓                   Duplicates line down
+    ⌥+shift+drag mouse          Column selection
+    ⌥+scroll mouse              Fast scroll
 
 //////////////////////////
 // SASS
@@ -109,26 +120,27 @@
 	---------------------------------------
 	MAC OS - COMMANDS
 	---------------------------------------
-	command+w                           closes active window
-	command+y			                quick view on finder
-	command+,			                current application preferences
-	command+option+m	                minimizes all current application windows
-	command+option+click(desktop)		Shows desktop
-	command+F3                  		Shows desktop
-	command+space                       Shows Finder
-	command+l                           Browser focus on address bar
-	command+tab                         Switch between applications
-	command+option+d                    Shows/hides dock menu
-	command+`                           Switch between application windows
-	crl+tab                             Switch between application tabs
-	command+option+m                    Force quit applications
-	command+q                           Quit application
-	command+shift+q                     Shutdown
-	command+ctrl+q                      Lock computer
-	command+shift+.                     Show hidden files
-	command+r                           Refresh
-	command+shift+r                     Refresh clearing cache
-
+	⌘+w                     closes active window
+	⌘+y                     quick view on finder
+	⌘+,                     current application preferences
+	⌘+⌥+m	                minimizes all current application windows
+	⌘+⌥+click(desktop)      Shows desktop
+	⌘+F3                    Shows desktop
+	⌘+space                 Shows Finder
+	⌘+l                     Browser focus on address bar
+	⌘+tab                   Switch between applications
+	⌘+⌥+d                   Shows/hides dock menu
+	⌘+`                     Switch between application windows
+	crl+tab                 Switch between application tabs
+	⌘+⌥+m                   Minimize all application windows
+    ⌘+⌥+escape              Force quit applications
+	⌘+q                     Quit application
+	⌘+shift+q               Shutdown
+	⌘+ctrl+q                Lock computer
+	⌘+shift+.               Show hidden files
+	⌘+r                     Refresh
+	⌘+shift+r               Refresh clearing cache
+    ⌘+shift+4               Takes a screenshot
 
 //////////////////////////
 // COMMAND LINE 
