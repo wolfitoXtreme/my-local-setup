@@ -141,6 +141,7 @@
 	⌘+shift+r                       Refresh clearing cache
     ⌘+shift+4                       Takes a screenshot
     selection + mouse drag + ⌥      Copies selected text
+    ⌘+⌥+j                           Shows developer tools (Chrome)
 
 
 //////////////////////////
