@@ -425,7 +425,9 @@
     $ git diff                                      Shows differences
     $ git diff <file-name>                          Show differences for a specific file
     $ git diff -w                                   Show differences ignoring white spaces
-
+    $ git remote add origin [remote repo Url]       Adds remote Url repository to local repo
+    $ git remote -v                                 Verifies remote repo Url
+    $ git push origin master                        Pushes all changes to empty remote repository
 
 	------------------------------------
 	GIT - Rebasing ignoring spaces
