@@ -67,7 +67,7 @@
         "editorCursor.foreground": "#ffffff",
         "editorWhitespace.foreground": "#5f5b5b",
         "editorGutter.background": "#030303",
-        "editorRuler.foreground": "#3f3e3e",
+        "editorRuler.foreground": "#2c2b2b",
         "breadcrumb.foreground": "#7e7e7e",
         "breadcrumb.background": "#000000"
     }, 
@@ -78,5 +78,8 @@
     "telemetry.enableTelemetry": false,
     "git.autoRepositoryDetection": false,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Visual Studio Dark"
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editor.showTabs": true,
+    "explorer.sortOrder": "type"
 }
+

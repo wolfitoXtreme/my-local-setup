@@ -82,17 +82,17 @@
 	ctrl+k, ctrl+u		        Convert to uppercase
 	ctrl+k, ctrl+l		        Convert to lowercase
 	shift+ctrl+RIGHT	        Select word by word
-    ctrl+shift+[                Collapses region
-    ctrl+shift+]                Expands region
-    
-    // MAC OS
-    ⌘+⌥+[                       Collapses region
-    ⌘+⌥+]                       Expands region
-    ⌘+⌥+↑                       Inserts cursor above selection
-    ⌥+shift+↑                   Duplicates line up
-    ⌥+shift+↓                   Duplicates line down
-    ⌥+shift+drag mouse          Column selection
-    ⌥+scroll mouse              Fast scroll
+	ctrl+shift+[                Collapses region
+	ctrl+shift+]                Expands region
+	
+	// MAC OS
+	⌘+⌥+[                       Collapses region
+	⌘+⌥+]                       Expands region
+	⌘+⌥+↑                       Inserts cursor above selection
+	⌥+shift+↑                   Duplicates line up
+	⌥+shift+↓                   Duplicates line down
+	⌥+shift+drag mouse          Column selection
+	⌥+scroll mouse              Fast scroll
 
 //////////////////////////
 // SASS
@@ -132,16 +132,16 @@
 	⌘+⌥+d                           Shows/hides dock menu
 	⌘+`                             Switch between application windows
 	crl+tab                         Switch between application tabs
-    ⌘+⌥+escape                      Force quit applications
+	⌘+⌥+escape                      Force quit applications
 	⌘+q                             Quit application
 	⌘+shift+q                       Shutdown
 	⌘+ctrl+q                        Lock computer
 	⌘+shift+.                       Show hidden files
-	⌘+r                             Refresh
-	⌘+shift+r                       Refresh clearing cache
-    ⌘+shift+4                       Takes a screenshot
-    selection + mouse drag + ⌥      Copies selected text
-    ⌘+⌥+j                           Shows developer tools (Chrome)
+	⌘+shift+4                       Takes a screenshot
+	selection + mouse drag + ⌥      Copies selected text
+	⌘+⌥+j                           Shows developer tools (Chrome)
+	⌘+r                             Refresh (Chrome)
+	⌘+shift+r                       Refresh clearing cache (Chrome)
 
 
 //////////////////////////
@@ -169,7 +169,7 @@
 	$ node <filename> 						Executes file
 	$ export <<VAR NAME>>=<<VAR VALUE>>		Exports global ENV variable 
 											(ex. export DATABASEURL=http://databaseurl/)
-	$ taskkill -F -IM node.exe              Kill server process
+	$ taskkill -F -IM node.exe              Kill server process (windows)
 
 	---------------------------------------
 	NPM
@@ -187,6 +187,15 @@
 	$ npm update <<package>>				update package
 	$ npm start 							Starts application from package.json start property key
 	$ npm run <<script>>					Runs installed script property of a package.json
+
+	---------------------------------------
+	NVM
+	---------------------------------------
+	$ nvm install <<node version>>			Installs specific Node version
+	$ nvm ls-remote							Lists available Node versions
+	$ nvm ls								List installed Node versions
+	$ nvm ls available						Lists available Node version (windows)
+	$ nvm use <<node version>>				Switches to specific Node version
 
 	---------------------------------------
 	TYPESCRIPT
@@ -211,8 +220,8 @@
 	$ brew search <program name>			search a program to install
 	$ brew install cask <program name>		installs a program with UI
 	$ brew install <program name>			installs a program without UI (ex. NodeJS)
-    $ brew list                             List installed apps
-    $ brew list cask                        List installed apps with UI
+	$ brew list                             List installed apps
+	$ brew list cask                        List installed apps with UI
 
 //////////////////////////
 // WEBPACK
@@ -413,6 +422,9 @@
 	$ git checkout master 							checkouts master
 	$ git revert --no-commit <commit id>..HEAD		Reverts repository to specified commit,
 													without deleting other commits
+    $ git diff                                      Shows differences
+    $ git diff <file-name>                          Show differences for a specific file
+    $ git diff -w                                   Show differences ignoring white spaces
 
 
 	------------------------------------
@@ -494,9 +506,9 @@
 	$ git stash drop stash@{n} // removes specific stash
 	$ git stash drop // removes all stashes
 
-    $ git stash <message>                           To stash with message
-    $ git stash list                                list stashes
-    $ git pop <stash id>                            Applies specific stash
+	$ git stash <message>                           To stash with message
+	$ git stash list                                list stashes
+	$ git pop <stash id>                            Applies specific stash
 
 	------------------------------------
 	GIT - Solving conflicts after Pull Request
@@ -534,20 +546,20 @@
 	------------------------------------
 	GIT - Changing commit description
 	------------------------------------
-    // For remote commits
-    Get a list of the 3 most recent commits
-    $ git rebase -i HEAD~3
-    To change initial commit 
-    $ git rebase -i --root
+	// For remote commits
+	Get a list of the 3 most recent commits
+	$ git rebase -i HEAD~3
+	To change initial commit 
+	$ git rebase -i --root
 
-    -> Replace 'pick' with 'reword' before commit id number.
-    -> Save commit list file
-    -> Change the commit message
-    $ git --push force
+	-> Replace 'pick' with 'reword' before commit id number.
+	-> Save commit list file
+	-> Change the commit message
+	$ git --push force
 
 
-    // For local commits
-    $git commit --amend 
+	// For local commits
+	$git commit --amend 
 	press "i"
 	Edit the commit message
 	press "esc"
