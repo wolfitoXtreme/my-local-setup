@@ -1,10 +1,17 @@
 // extensions
 * Sublime Text Keymap and Settings Importer
 * Code Spell Checker
+* ESLint 2.0.11
 
 // linter configuration files:
 //
 
 // Custom configuration file location
+
+// MAC OS
+users/[USER]/Library/Application Support/Code/User/settings.json // theme colors
+users/[USER]/Library/Application Support/Code/User/keybindings.json // key bindings
+
+// WINDOWS
 C:\Users\[USER]\AppData\Roaming\Code\User\settings.json     // theme colors
 C:\Users\[USER]\AppData\Roaming\Code\User\keybindings.json  // key bindings

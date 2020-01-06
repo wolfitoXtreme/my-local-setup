@@ -160,6 +160,7 @@
 	$ rm 					removes file
 	$ rm -rf				removes directories and content within rm
 	$ clear					clears the console
+    $ history               outputs terminal history
 
 	---------------------------------------
 	NODE
@@ -170,6 +171,8 @@
 	$ export <<VAR NAME>>=<<VAR VALUE>>		Exports global ENV variable 
 											(ex. export DATABASEURL=http://databaseurl/)
 	$ taskkill -F -IM node.exe              Kill server process (windows)
+    $ ps ea                                 List processes currently running
+    $ kill -9 <<Process ID>>                Kills process
 
 	---------------------------------------
 	NPM
@@ -187,6 +190,9 @@
 	$ npm update <<package>>				update package
 	$ npm start 							Starts application from package.json start property key
 	$ npm run <<script>>					Runs installed script property of a package.json
+    $ npm link                              To create a symbolic link module
+    $ npm link <<package>>                  To link to a symbolic module created with 'npm link'
+    $ npm unlink                            unlink a project from a symbolic one
 
 	---------------------------------------
 	NVM
@@ -196,6 +202,12 @@
 	$ nvm ls								List installed Node versions
 	$ nvm ls available						Lists available Node version (windows)
 	$ nvm use <<node version>>				Switches to specific Node version
+
+	---------------------------------------
+    GULP
+	---------------------------------------
+    $ gulp --tasks                          List tasks
+    $ gulp --tasks-simple                   List tasks first level
 
 	---------------------------------------
 	TYPESCRIPT
@@ -428,6 +440,7 @@
     $ git remote add origin [remote repo Url]       Adds remote Url repository to local repo
     $ git remote -v                                 Verifies remote repo Url
     $ git push origin master                        Pushes all changes to empty remote repository
+    $ git branch <branch-name>                      Creates a new local branch
 
 	------------------------------------
 	GIT - Rebasing ignoring spaces
@@ -568,6 +581,13 @@
 	write ":wq"
 	then press enter
 
+	------------------------------------
+	GIT - Un-tracking already committed files 
+	------------------------------------
+
+    * git rm -r --cached .
+    * git add .
+    * git commit -m "<<commit message>>"
 
 //////////////////////////
 // MONGO 

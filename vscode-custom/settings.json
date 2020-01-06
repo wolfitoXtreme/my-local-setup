@@ -69,7 +69,10 @@
         "editorGutter.background": "#030303",
         "editorRuler.foreground": "#2c2b2b",
         "breadcrumb.foreground": "#7e7e7e",
-        "breadcrumb.background": "#000000"
+        "breadcrumb.background": "#000000",
+        "list.focusBackground": "#000000", 
+        "list.focusForeground": "#ffffff", 
+        "input.border": "#504f4f"
     }, 
     "workbench.statusBar.visible": true,
     "editor.minimap.enabled": false,
@@ -80,6 +83,12 @@
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.editor.showTabs": true,
-    "explorer.sortOrder": "type"
+    "explorer.sortOrder": "type",
+    "editor.accessibilitySupport": "off",
+    "search.exclude": {
+      "**/node_modules": false
+    },
+    "cSpell.userWords": [
+        "transpiling"
+    ]
 }
-
