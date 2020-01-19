@@ -2,6 +2,7 @@
 * Sublime Text Keymap and Settings Importer
 * Code Spell Checker
 * ESLint 2.0.11
+* GitLens 10
 
 // linter configuration files:
 //
