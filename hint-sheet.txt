@@ -3,8 +3,8 @@
 // Current Global Dependencies
 // ---------------------------------------
     node                    v10.15.3    // node
-                            //v8.15.1     
-                            //v6.11.2    
+                            //v8.15.1
+                            //v6.11.2
     nodemon                 1.18.10     // node
     npm                     6.1.0       // node
     gulp                    3.9.1       // node
@@ -25,7 +25,7 @@
     ---------------------------------------
     [string([^']*)] -> finds 'string...'
      \1 -> capturing group (for replacements)
-    
+
     [class="([^"]*)"] -> finds 'attribute class and contents'
 
 
@@ -42,13 +42,13 @@
     C:/projects/folder/subfolder/, -*/node_modules/* -> will exclude node_modules
 
     ---------------------------------------
-    SUBLIME - HTML BOILERPLATE 
+    SUBLIME - HTML BOILERPLATE
     ---------------------------------------
     type html + tab (document syntax should be HTML)
     * works with any tag
 
     ---------------------------------------
-    SUBLIME - HTML DUPLICATE 
+    SUBLIME - HTML DUPLICATE
     ---------------------------------------
     hit  ctr + shift + D to duplicate a line, if the cursor is placed at its end, or to duplicate a code block if the whole block is selected.
 
@@ -84,7 +84,7 @@
     shift+ctrl+RIGHT            Select word by word
     ctrl+shift+[                Collapses region
     ctrl+shift+]                Expands region
-    
+
     // MAC OS
     ⌘+⌥+[                       Collapses region
     ⌘+⌥+]                       Expands region
@@ -149,13 +149,13 @@
     ⌘+shift+r                       Refresh clearing cache (Chrome)
     ⌘+del                           Deletes a file
     ⌘+shift+del                     Deletes a file permanently
-    
+
 
 
 //////////////////////////
-// COMMAND LINE 
+// COMMAND LINE
 //////////////////////////
-    
+
     ------------------------------------
     Basic commands
     ------------------------------------
@@ -183,7 +183,7 @@
     $ node                                  Node command Line
     $ ctrl + c (twice)                      Exits CLI
     $ node <filename>                       Executes file
-    $ export <<VAR NAME>>=<<VAR VALUE>>     Exports global ENV variable 
+    $ export <<VAR NAME>>=<<VAR VALUE>>     Exports global ENV variable
                                             (ex. export DATABASEURL=http://databaseurl/)
     $ taskkill -F -IM node.exe              Kill server process (windows)
     $ kill -9 <<Process ID>>                Kills process
@@ -233,12 +233,12 @@
     $tsc <file.ts> --watch                  watch particular file
     $ tsc -t <JS VERSION: Ex. ES5>          compile to target JS version
     $tsc --outFile <file.js> <files.ts>     compile to one single file plus files that should be bundled
-    $tsc <file.ts> --outFile <file.js>      compile to and from one single file  
+    $tsc <file.ts> --outFile <file.js>      compile to and from one single file
     $tsc --experimentalDecorators           Allows use of experimental decorators
 
     ---------------------------------------
     CREATE-REACT-APP
-    ---------------------------------------    
+    ---------------------------------------
     $ create-react-app . --scripts-version=react-scripts-ts                Creates a React App using TypeScript. "." uses current folder.
 
     ---------------------------------------
@@ -257,7 +257,7 @@
     ------------------------------------
     Basic commands
     ------------------------------------
-    
+
 
 //////////////////////////
 // DEMANDWARE
@@ -307,7 +307,7 @@
     - Merchant Tools >  Products and Catalogs >  Products > M0301-PCE-FR - General (Product)
         - [x] (Product) -> assign
         - [x] (Category) -> Next
-        - Classification Category: (Category)         
+        - Classification Category: (Category)
         - Primary Category: (Category)
         - Finish: Return to Products > >
 
@@ -359,7 +359,7 @@
     --------------------------------------
     DEMANDWARE - URL TRIGGER
     ---------------------------------------
-    URL TRIGGER: 
+    URL TRIGGER:
     Static Page:
     <a href="$url('Page-Show','cid','privacy-policy', 'format', 'ajax')$">
 
@@ -378,7 +378,7 @@
     ---------------------------------------
     <link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY, null, 'css/content.css').toString()}" type="text/css"/>
 
-    then just upload the file in (shared) library : 
+    then just upload the file in (shared) library :
     \library\static\default\css
 
     ------------------------------------
@@ -456,6 +456,9 @@
     $ git remote -v                                     Verifies remote repo Url
     $ git push origin master                            Pushes all changes to empty remote repository
     $ git branch <branch-name>                          Creates a new local branch
+    $ git reset HEAD~1 --soft                           Remove commits and stage them
+    $ git reset --hard <commit name>                    Resets to the specified commit
+    $ git push --force                                  Forces changes
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
@@ -514,7 +517,7 @@
 
     // after rebase
     $ git push -f
-    
+
     --------------------------------------
     GIT - RENAMING FILES
     ---------------------------------------
@@ -579,7 +582,7 @@
     // For remote commits
     Get a list of the 3 most recent commits
     $ git rebase -i HEAD~3
-    To change initial commit 
+    To change initial commit
     $ git rebase -i --root
 
     -> Replace 'pick' with 'reword' before commit id number.
@@ -589,7 +592,7 @@
 
 
     // For local commits
-    $git commit --amend 
+    $git commit --amend
     press "i"
     Edit the commit message
     press "esc"
@@ -597,17 +600,46 @@
     then press enter
 
     ------------------------------------
-    GIT - Un-tracking already committed files 
+    GIT - Un-tracking already committed files
     ------------------------------------
 
     * git rm -r --cached .
     * git add .
     * git commit -m "<<commit message>>"
 
+    ------------------------------------
+    GIT - Flow A
+    ------------------------------------
+    * Create local branch from remote.
+    * Make just one commit containing all changes.
+    * In case of several commits squash them into one.
+    * Switch to remote origin branch, pull for changes.
+    * Switch to local branch then rebase
+      $ git rebase <<remote origin branch>>
+    * Push creating a remote from the branch
+      $ push -u origin <<branch name>>
+
+    ------------------------------------
+    GIT - Flow B
+    ------------------------------------
+    * Create remote branch from remote.
+    * Make local commits.
+    * Squash commits.
+      $ git rebase <<local origin branch>> -i. ex. $ git rebase develop
+      Make sure the first commit says "pick" and change the rest from "pick" to "squash". -- This will squash each commit into the previous commit, which will continue until every commit is squashed into the first commit.
+      $ git push origin <<branch name>> --force-with-lease
+    * Create Pull Request.
+    * After updating the Pull Request...
+    * Switch to remote origin branch (ex. develop), pull for changes.
+    * Switch to local branch then rebase, fix conflicts.
+    * Push to remote branch.
+      $ git push origin -u f<<branch name>> --force
+      $ git push origin <<branch name>> --force-with-lease
+
 //////////////////////////
-// MONGO 
+// MONGO
 //////////////////////////
-    
+
     ------------------------------------
     Basic commands
     ------------------------------------
@@ -620,7 +652,7 @@
     use                     - Uses or creates a database to work with
                               * When new db is created won't be listed till data is stored
     insert                  - Inserts entries into the db. ex: db.dogs.insert({name:"Marley",type:"Perrito Asesino"})
-    find                    - Finds entries. 
+    find                    - Finds entries.
                               ex: db.dogs.find() <<Finds all entries>>
                               ex: db.dogs.find({key:"value"}) <<Finds key/value matching pair>>
     pretty                  - shows formatted text
@@ -634,9 +666,9 @@
 
 
 //////////////////////////
-// HEROKU 
+// HEROKU
 //////////////////////////
-    
+
     ------------------------------------
     Basic commands
     ------------------------------------
@@ -650,6 +682,5 @@
     $ heroku config:set <VAR_NAME>      Sets global environment variable
 
 //////////////////////////
-// SOURCETREE 
+// SOURCETREE
 //////////////////////////
-    
