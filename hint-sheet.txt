@@ -528,7 +528,8 @@
     ------------------------------------
     $ git reset HEAD --hard (option 1)
     $ git reset HEAD~ (option 2)
-    $ git reset --hard origin/<<origin branch>> (option 3)
+    $ git fetch origin
+        $ git reset --hard origin/<<origin branch>> (option 3)
 
     ------------------------------------
     GIT - LIST/VIEW STASHES
