@@ -1,8 +1,13 @@
 // extensions
 * Sublime Text Keymap and Settings Importer
 * Code Spell Checker
-* ESLint 2.0.11
+* ESLint - dbaeumer.vscode-eslint
 * GitLens 10
+* Cucumber (Gherkin) Full Support
+* Prettier - Code formatter - esbenp.prettier-vscode
+* Material Icon Theme - pkief.material-icon-theme
+* stylelint - stylelint.vscode-stylelint
+
 
 // linter configuration files:
 //
