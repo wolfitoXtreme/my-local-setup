@@ -459,6 +459,7 @@
     $ git reset HEAD~1 --soft                           Remove commits and stage them
     $ git reset --hard <commit name>                    Resets to the specified commit
     $ git push --force                                  Forces changes
+    $ git push --no-verify                              To not run tests while pushing
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
@@ -636,6 +637,19 @@
     * Push to remote branch.
       $ git push origin -u f<<branch name>> --force
       $ git push origin <<branch name>> --force-with-lease
+
+    ------------------------------------
+    GIT - Solving conflicts
+    ------------------------------------
+    conflicts applying a stash
+    --
+    * To get updated change, use "resolve using mine" when files have been modified on stash
+    * To get stashed change,  use "resolve using theirs" when files have been modified on stash
+
+    conflicts rebasing to remote
+    --
+    *
+
 
 //////////////////////////
 // MONGO
