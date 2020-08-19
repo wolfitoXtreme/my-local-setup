@@ -610,6 +610,12 @@
     * git commit -m "<<commit message>>"
 
     ------------------------------------
+    GIT - Reset to remote (Discard everything)
+    ------------------------------------
+    * git fetch origin // will get remote (origin)
+    * git reset --hard origin/master // discards any changes and set as remote branch
+
+    ------------------------------------
     GIT - Flow A
     ------------------------------------
     * Create local branch from remote.
