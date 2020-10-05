@@ -209,6 +209,13 @@
     $ npm unlink                            unlink a project from a symbolic one
 
     ---------------------------------------
+    YARN
+    ---------------------------------------
+    $ yarn --version                        Get Yarn version
+    $ yarn versions                         Versions of Yarn, Node.js, and its dependencies
+    $ brew upgrade yarn                     Update Yarn via Homebrew
+
+    ---------------------------------------
     NVM
     ---------------------------------------
     $ nvm install <<node version>>          Installs specific Node version
