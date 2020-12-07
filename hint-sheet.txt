@@ -661,7 +661,10 @@
 
     conflicts rebasing to remote
     --
-    *
+
+    * Get changed files between two branches
+      $ git diff --name-status <base-branch> <working-branch>
+
 
 
 //////////////////////////
