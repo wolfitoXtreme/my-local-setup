@@ -2,7 +2,9 @@
 
 // Current Global Dependencies
 // ---------------------------------------
-    node                    v10.15.3    // node
+    node                    15.3.0
+                            // 12.15.0
+                            // v10.15.3
                             //v8.15.1
                             //v6.11.2
     nodemon                 1.18.10     // node
@@ -11,7 +13,6 @@
     jshint                  2.9.5       // sublime
     htmlhint                0.9.13      // sublime
     eslint                  5.15.3      // sublime
-    create-react-app        2.1.8       // react
     typescript              3.3.4000    // typescript
                             // 2.1.5
 
