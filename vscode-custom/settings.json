@@ -51,12 +51,11 @@
   "editor.tabSize": 2,
   "editor.fontFamily": "Consolas, ‘DejaVu Sans Mono’, Monaco, Menlo, ‘Courier New’, monospace, ‘Fira Code’",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "editor.accessibilitySupport": "off",
   "editor.suggestSelection": "first",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true
+    "source.fixAll.stylelint": true
   },
   "workbench.activityBar.visible": true,
   "workbench.statusBar.visible": true,
@@ -100,18 +99,21 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {},
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "git.autoRepositoryDetection": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.5,
   "explorer.sortOrder": "type",
   "search.exclude": {
     "**/node_modules": false
   },
   "cSpell.userWords": ["transpiling"],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {},
   "eslint.options": {
     "parser": "babel-eslint",
     "env": {
@@ -126,14 +128,24 @@
       }
     },
     "rules": {
-      "semi": "error"
+      "semi": "error",
+      "import/order": [
+        "error",
+        {
+          "groups": ["external", "builtin", "parent", "sibling", "internal"],
+          "newlines-between": "always"
+        }
+      ]
     }
   },
   "eslint.lintTask.enable": true,
   "eslint.alwaysShowStatus": true,
-  "gitlens.views.repositories.location": "gitlens",
-  "gitlens.views.fileHistory.location": "gitlens",
-  "gitlens.views.lineHistory.location": "gitlens",
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.search.location": "gitlens"
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true
+  },
+  "git.autoRepositoryDetection": false,
+  "gitlens.views.fileHistory.avatars": true,
+  "gitlens.views.lineHistory.enabled": true
 }
