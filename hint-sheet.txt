@@ -160,22 +160,24 @@
     ------------------------------------
     Basic commands
     ------------------------------------
-    $ ls                                list files, will list files inside directories If path is provided
-    $ ls -a                             list files, including hidden directories
-    $ cd ..                             change directory
-    $ touch                             creates file
-    $ any letter + [tab]                complete With existing files directories
-    $ mkdir                             creates directory
-    $ rm                                removes file
-    $ rm -rf                            removes directories and content within rm
-    $ clear                             clears the console
-    $ history                           outputs terminal history
-    $ ctrl + a                          Go to beginning of line
-    $ ctrl + b                          Go to end of line
-    $ ps ea                             List processes currently running
-    $ sudo lsof -PiTCP -sTCP:LISTEN     List of ports opened
-    $ pwd -p                            Displays current working directory physical path
-    $ pwd -l                            Displays current working directory logical path
+    $ ls                                                    list files, will list files inside directories If path is provided
+    $ ls -a                                                 list files, including hidden directories
+    $ cd ..                                                 change directory
+    $ touch                                                 creates file
+    $ any letter + [tab]                                    complete With existing files directories
+    $ mkdir                                                 creates directory
+    $ rm                                                    removes file
+    $ rm -rf                                                removes directories and content within rm
+    $ clear                                                 clears the console
+    $ history                                               outputs terminal history
+    $ ctrl + a                                              Go to beginning of line
+    $ ctrl + b                                              Go to end of line
+    $ ps ea                                                 List processes currently running
+    $ sudo lsof -PiTCP -sTCP:LISTEN                         List of ports opened
+    $ pwd -p                                                Displays current working directory physical path
+    $ pwd -l                                                Displays current working directory logical path
+    $ rm -rf <dir>                                          Remove specific dir and its contents
+    $ find . -name "*.<file ext>" -type f -delete             Removes recursively all specified files
 
 
     ---------------------------------------
