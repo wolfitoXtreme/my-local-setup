@@ -665,8 +665,23 @@
     conflicts rebasing to remote
     --
 
+    * Create branch locally
+      $ git branch <new-branch> // from current branch
+      $ git branch <new-branch> <base-branch> // from any other than current
+
+    * Create branch from remote
+      $ git branch --track <new-branch> origin/<base-branch>
+      //or
+      $ git checkout --track origin/<base-branch>
+
+    * Create branch from commit
+      $ git branch <new-branch> <commit id>
+
     * Get changed files between two branches
       $ git diff --name-status <base-branch> <working-branch>
+
+    * List commit not pushed yet
+      $ git log origin/<working-branch>..HEAD
 
 
 
