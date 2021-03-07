@@ -583,12 +583,6 @@
     $ git push origin <new_name>
 
     ------------------------------------
-    GIT - Remove last commit from remote (preferably feature/bugfix branches)
-    ------------------------------------
-    $ git reset --hard <previous commit ID> // local branch will be one behind
-    $ git push --force
-
-    ------------------------------------
     GIT - Changing commit description
     ------------------------------------
     // For remote commits
@@ -665,6 +659,10 @@
     conflicts rebasing to remote
     --
 
+    ------------------------------------
+    GIT - Creating branches
+    ------------------------------------
+
     * Create branch locally
       $ git branch <new-branch> // from current branch
       $ git branch <new-branch> <base-branch> // from any other than current
@@ -683,7 +681,42 @@
     * List commit not pushed yet
       $ git log origin/<working-branch>..HEAD
 
+    ------------------------------------
+    GIT - Creating remote repository from existing local
+    ------------------------------------
+    $ create repository on github
+    $ git remote add origin <remote repository URL>
+    $ git push -f origin master
 
+    ------------------------------------
+    GIT - Remove last commit from remote (preferably feature/bugfix branches)
+    ------------------------------------
+    $ git reset --hard <previous commit ID> // local branch will be one behind
+    $ git push --force
+
+    ------------------------------------
+    GIT - save credentials
+    ------------------------------------
+    git config --global credential.helper wincred
+
+    ------------------------------------
+    GIT - deploy on GitHup pages
+    ------------------------------------
+    $ yarn add gh-pages -D
+    * Add in package.json ...
+        {
+            ...
+            "homepage": "https://<user>.github.io/<app-name>/",
+            ...
+        }
+        ...
+        "scripts": {
+            ...
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build"
+            ...
+        }
+    $ yarn deploy
 
 //////////////////////////
 // MONGO
