@@ -177,7 +177,7 @@
     $ pwd -p                                                Displays current working directory physical path
     $ pwd -l                                                Displays current working directory logical path
     $ rm -rf <dir>                                          Remove specific dir and its contents
-    $ find . -name "*.<file ext>" -type f -delete             Removes recursively all specified files
+    $ find . -name "*.<file ext>" -type f -delete           Removes recursively all specified files
 
 
     ---------------------------------------
@@ -754,8 +754,8 @@
     ------------------------------------
     Basic commands
     ------------------------------------
-    $ heroku login                      log inyo heroku
-    $ heroku login -i                   log inyo heroku interactive
+    $ heroku login                      log into heroku
+    $ heroku login -i                   log into heroku interactive
     $ heroku create                     sends repository to Heroku server
     $ heroku remote -v                  Gets remote repository version
     $ git push heroku master            Pushes all commited changes to Heroku

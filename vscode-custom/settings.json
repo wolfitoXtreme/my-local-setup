@@ -80,7 +80,7 @@
     "editor.hoverHighlightBackground": "#676f78",
     "editor.wordHighlightBackground": "#00ffe533",
     "editor.wordHighlightStrongBackground": "#f5ee2d4c",
-    "editor.findMatchBackground": "#ffd900b8",
+    "editor.findMatchBackground": "#ffd9007a",
     "editor.findMatchHighlightBackground": "#6df20e3e",
     "editor.lineHighlightBackground": "#43474b",
     "editorLineNumber.foreground": "#7e7e7e",
@@ -114,30 +114,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {},
-  "eslint.options": {
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "semi": "error",
-      "import/order": [
-        "error",
-        {
-          "groups": ["external", "builtin", "parent", "sibling", "internal"],
-          "newlines-between": "always"
-        }
-      ]
-    }
-  },
   "eslint.lintTask.enable": true,
   "eslint.alwaysShowStatus": true,
   "prettier": {
@@ -146,6 +122,5 @@
     "bracketSpacing": true
   },
   "git.autoRepositoryDetection": false,
-  "gitlens.views.fileHistory.avatars": true,
-  "gitlens.views.lineHistory.enabled": true
+  "gitlens.views.fileHistory.avatars": true
 }
