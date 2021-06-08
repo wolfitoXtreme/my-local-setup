@@ -470,6 +470,7 @@
     $ git reset --hard <commit name>                    Resets to the specified commit
     $ git push --force                                  Forces changes
     $ git push --no-verify                              To not run tests while pushing
+    $ git rm <file-name> --cached                       Removes cached files from tracking
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
