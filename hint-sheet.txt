@@ -690,6 +690,14 @@
     $ git push -f origin master
 
     ------------------------------------
+    GIT - Cloning Local repository and reseting it
+    ------------------------------------
+    $ rm -rf .git
+    $ git init
+    $ git add .
+    $ git commit -m "Initial commit"
+
+    ------------------------------------
     GIT - Remove last commit from remote (preferably feature/bugfix branches)
     ------------------------------------
     $ git reset --hard <previous commit ID> // local branch will be one behind
