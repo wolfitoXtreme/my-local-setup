@@ -190,6 +190,12 @@
                                             (ex. export DATABASEURL=http://databaseurl/)
     $ taskkill -F -IM node.exe              Kill server process (windows)
     $ kill -9 <<Process ID>>                Kills process
+    $ rm -rf node_modules                   Removes all installed modules // clean project installation
+    $ rm -rf .yarn/cache                    Removes yarn cache // clean project installation
+    $ rm -rf .cache                         Removes cache // clean project installation
+    $ rm -rf .git                           Removes git
+    $ git rm -r --cached .                  Removes git cached files
+
 
     ---------------------------------------
     NPM
@@ -456,6 +462,8 @@
     $ q                                                 exits gits viewer
     $ git checkout                                      checkout
     $ git checkout <commit id>                          checkouts particular commit
+    $ git checkout <commit id> <file path>              checkouts file from a particular commit
+    $ git checkout <commit hash> <--file path>          checkouts file from a particular hash
     $ git checkout master                               checkouts master
     $ git revert --no-commit <commit id>..HEAD          Reverts repository to specified commit,
                                                         without deleting other commits
@@ -471,6 +479,7 @@
     $ git push --force                                  Forces changes
     $ git push --no-verify                              To not run tests while pushing
     $ git rm <file-name> --cached                       Removes cached files from tracking
+    git push origin <<branch name>> --force-with-lease  Safe pushing
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
@@ -544,7 +553,7 @@
         $ git reset --hard origin/<<origin branch>> (option 3)
 
     ------------------------------------
-    GIT - LIST/VIEW STASHES
+    GIT - LIST/VIEW/APPLY STASHES
     ------------------------------------
     $ git stash list // list stashes
     $ git stash show -p // last stash contents
@@ -555,6 +564,7 @@
     $ git stash <message>                           To stash with message
     $ git stash list                                list stashes
     $ git pop <stash id>                            Applies specific stash
+    $ git stash apply stash@{<stash-index>}         Applies specific stash, 0 based index
 
     ------------------------------------
     GIT - Solving conflicts after Pull Request
@@ -572,7 +582,6 @@
     $ git push
 
     ------------------------------------
-    GIT - Renaming a remote branch from local one
     ------------------------------------
     rename the local branch to the new name
     $ git branch -m <old_name> <new_name>
@@ -676,6 +685,9 @@
     * Create branch from commit
       $ git branch <new-branch> <commit id>
 
+    * Adds remote to existing local origin branch
+      $ git branch -u origin/<remote-branch>
+
     * Get changed files between two branches
       $ git diff --name-status <base-branch> <working-branch>
 
@@ -690,12 +702,18 @@
     $ git push -f origin master
 
     ------------------------------------
-    GIT - Cloning Local repository and reseting it
+    GIT - Cloning Local repository and resetting it
     ------------------------------------
     $ rm -rf .git
+    $ git rm -r --cached .
     $ git init
     $ git add .
     $ git commit -m "Initial commit"
+
+    ------------------------------------
+    GIT - Cloning into existing directory
+    ------------------------------------
+    $ git clone <repository-url> ./
 
     ------------------------------------
     GIT - Remove last commit from remote (preferably feature/bugfix branches)
