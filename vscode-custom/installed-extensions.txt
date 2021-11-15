@@ -1,12 +1,19 @@
 // extensions
-* Sublime Text Keymap and Settings Importer
-* Code Spell Checker
-* ESLint - dbaeumer.vscode-eslint
-* GitLens 10
-* Cucumber (Gherkin) Full Support
-* Prettier - Code formatter - esbenp.prettier-vscode
-* Material Icon Theme - pkief.material-icon-theme
-* stylelint - stylelint.vscode-stylelint
+* Code Spell Checker - Street Side Software
+* Sublime Text Keymap and Settings Importer - Microsoft
+* ESLint - Dirk Baeumer
+* GitLens — Git supercharged - GitKraken
+* Git Blame - Wade Anderson
+* Git History - Don Jayamanne
+* Cucumber (Gherkin) Full Support - Alexander Krechik
+* Prettier - Code formatter - Prettier
+* Material Icon Theme - Philipp Kief
+* stylelint - stylelint
+* Path Intellisense - Christian Kohler
+* Selected Lines Count - Ram Dayal Vaishnav
+* Sort JSON array - Frederik Claus
+* Visual Studio IntelliCode - Microsoft
+
 
 
 // linter configuration files:

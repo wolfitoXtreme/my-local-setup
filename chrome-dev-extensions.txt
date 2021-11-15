@@ -1,2 +1,5 @@
-- React Developer Tools
-- Redux DevTools
+* React Developer Tools
+* Redux DevTools
+* JSONView
+* ModHeader
+* Omnibug
