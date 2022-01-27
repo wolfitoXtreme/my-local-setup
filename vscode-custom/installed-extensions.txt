@@ -13,8 +13,7 @@
 * Selected Lines Count - Ram Dayal Vaishnav
 * Sort JSON array - Frederik Claus
 * Visual Studio IntelliCode - Microsoft
-
-
+* Volar - Johnson Chu
 
 // linter configuration files:
 //

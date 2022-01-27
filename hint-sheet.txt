@@ -189,6 +189,7 @@
     $ export <<VAR NAME>>=<<VAR VALUE>>     Exports global ENV variable
                                             (ex. export DATABASEURL=http://databaseurl/)
     $ taskkill -F -IM node.exe              Kill server process (windows)
+    $ sudo lsof -i :3000                    Finds process ID in port
     $ kill -9 <<Process ID>>                Kills process
     $ rm -rf node_modules                   Removes all installed modules // clean project installation
     $ rm -rf .yarn/cache                    Removes yarn cache // clean project installation
