@@ -79,25 +79,27 @@
     ---------------------------------------
     VSCODE - COMMANDS
     ---------------------------------------
-    alt+click                   Multiple insertion points
-    ctrl+k, ctrl+u              Convert to uppercase
-    ctrl+k, ctrl+l              Convert to lowercase
-    shift+ctrl+RIGHT            Select word by word
-    ctrl+shift+[                Collapses region
-    ctrl+shift+]                Expands region
+    alt+click                                               Multiple insertion points
+    ctrl+k, ctrl+u                                          Convert to uppercase
+    ctrl+k, ctrl+l                                          Convert to lowercase
+    shift+ctrl+RIGHT                                        Select word by word
+    ctrl+shift+[                                            Collapses region
+    ctrl+shift+]                                            Expands region
 
     // MAC OS
-    ⌘+⌥+[                       Collapses region
-    ⌘+⌥+]                       Expands region
-    ⌘+⌥+↑                       Inserts cursor above selection
-    ⌥+shift+↑                   Duplicates line up
-    ⌥+shift+↓                   Duplicates line down
-    ⌥+shift+drag mouse          Column selection
-    ⌥+scroll mouse              Fast scroll
-    ⌘+t                         Go to fle, Go to symbol in Workspace (#symbol-name)
-    ⌘+d                         Quick open file
-    ⌘+left click (over link)    Open a symbol
-    ⌘+⌥+left click (over link)  Open a symbol on the side
+    ⌘+⌥+[                                                   Collapses region
+    ⌘+⌥+]                                                   Expands region
+    ⌘+⌥+↑                                                   Inserts cursor above selection
+    ⌥+shift+↑                                               Duplicates line up
+    ⌥+shift+↓                                               Duplicates line down
+    ⌥+shift+drag mouse                                      Column selection
+    ⌥+scroll mouse                                          Fast scroll
+    ⌘+t                                                     Go to fle, Go to symbol in Workspace (#symbol-name)
+    ⌘+d                                                     Quick open file
+    ⌘+left click (over link)                                Open a symbol
+    ⌘+⌥+left click (over link)                              Open a symbol on the side
+
+    ./directory/**/*/{*.filetype,*.filetype,*.filetype}     Search multiple file types
 
 
 //////////////////////////
@@ -162,6 +164,9 @@
     ------------------------------------
     $ ls                                                    list files, will list files inside directories If path is provided
     $ ls -a                                                 list files, including hidden directories
+    $ ls -l                                                 list files long list mode
+    $ ls | wc -l                                            gets number of contained files (not hidden)
+    $ ls  */**/*.<ext>                                      gets all file extension type recursively
     $ cd ..                                                 change directory
     $ touch                                                 creates file
     $ any letter + [tab]                                    complete With existing files directories
@@ -217,13 +222,19 @@
     $ npm link                              To create a symbolic link module
     $ npm link <<package>>                  To link to a symbolic module created with 'npm link'
     $ npm unlink                            unlink a project from a symbolic one
+    $ npm run lint -- --fix                 Fix linting problems automatically
 
     ---------------------------------------
     YARN
     ---------------------------------------
-    $ yarn --version                        Get Yarn version
-    $ yarn versions                         Versions of Yarn, Node.js, and its dependencies
-    $ brew upgrade yarn                     Update Yarn via Homebrew
+    $ yarn --version                                            Get Yarn version
+    $ yarn versions                                             Versions of Yarn, Node.js, and its dependencies
+    $ brew upgrade yarn                                         Update Yarn via Homebrew
+    $ yarn add <package-name>                                   installs the latest version of the package.
+    $ yarn add <package-name>@<version>                         installs the specific version of the package.
+    $ yarn global add <package-name>                            Adds global package
+    $ yarn global remove <package-name>                         Removes global package
+    $ npm config set registry https://registry.npmjs.org/       Change registry for packages installation
 
     ---------------------------------------
     NVM
@@ -236,10 +247,10 @@
     $ nvm alias default <<node version>>    Sets the default node version
 
     ---------------------------------------
-        GULP
+    GULP
     ---------------------------------------
-        $ gulp --tasks                      List tasks
-        $ gulp --tasks-simple               List tasks first level
+    $ gulp --tasks                      List tasks
+    $ gulp --tasks-simple               List tasks first level
 
     ---------------------------------------
     TYPESCRIPT
@@ -268,13 +279,17 @@
     $ brew list cask                        List installed apps with UI
 
 //////////////////////////
-// WEBPACK
+// VUE
 /////////////////////////
 
     ------------------------------------
     Basic commands
     ------------------------------------
-
+    $ npm init vue@2.0.3                        initialize new Vue project using VITE
+    $ yarn global add  @vue/cli@4.5.4           global Vue CLI installation for Vue2/Vue3
+    $ vue init <template-name> <project-name>   Initialize vue project using vue-cli (ue init webpack project-name)
+                                                https://vuejs-templates.github.io/webpack
+    $ vue create <project-name>                 Initialize vue project using @vue/cli
 
 //////////////////////////
 // DEMANDWARE
@@ -480,7 +495,9 @@
     $ git push --force                                  Forces changes
     $ git push --no-verify                              To not run tests while pushing
     $ git rm <file-name> --cached                       Removes cached files from tracking
-    git push origin <<branch name>> --force-with-lease  Safe pushing
+    $ git push origin <<branch name>> --force-with-lease  Safe pushing
+    $ git remote set-url origin <git URL>               Change remote origin
+    $ git rebase -i HEAD~3                              Interactive rebase with no remote
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
@@ -504,7 +521,7 @@
     --------------------------------------
     GIT - UPDATING FROM 'MASTER'
     ---------------------------------------
-    $git checkout [destination brach]
+    $git checkout [destination branch]
     $git merge master
 
     press "i"
@@ -687,7 +704,8 @@
       $ git branch <new-branch> <commit id>
 
     * Adds remote to existing local origin branch
-      $ git branch -u origin/<remote-branch>
+      $ git branch -u origin/<remote-branch> // if there is a remote
+      $ git push -u origin <local-branch> // if there is no remote yet
 
     * Get changed files between two branches
       $ git diff --name-status <base-branch> <working-branch>
