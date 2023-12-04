@@ -2,19 +2,16 @@
 
 // Current Global Dependencies
 // ---------------------------------------
-    node                    15.3.0
-                            // 12.15.0
-                            // v10.15.3
-                            //v8.15.1
-                            //v6.11.2
-    nodemon                 1.18.10     // node
-    npm                     6.1.0       // node
-    gulp                    3.9.1       // node
-    jshint                  2.9.5       // sublime
-    htmlhint                0.9.13      // sublime
-    eslint                  5.15.3      // sublime
-    typescript              3.3.4000    // typescript
-                            // 2.1.5
+    node                    v12.22.9
+    nvm                     0.39.1
+    npm                     6.1.0
+    yarn                    1.22.19       // 1.22.17
+    nodemon                 1.18.10
+    gulp                    3.9.1
+    jshint                  2.9.5
+    htmlhint                0.9.13
+    eslint                  5.15.3
+    typescript              3.3.4
 
 
 //////////////////////////
@@ -87,17 +84,17 @@
     ctrl+shift+]                                            Expands region
 
     // MAC OS
-    ⌘+⌥+[                                                   Collapses region
-    ⌘+⌥+]                                                   Expands region
-    ⌘+⌥+↑                                                   Inserts cursor above selection
-    ⌥+shift+↑                                               Duplicates line up
-    ⌥+shift+↓                                               Duplicates line down
-    ⌥+shift+drag mouse                                      Column selection
-    ⌥+scroll mouse                                          Fast scroll
-    ⌘+t                                                     Go to fle, Go to symbol in Workspace (#symbol-name)
-    ⌘+d                                                     Quick open file
-    ⌘+left click (over link)                                Open a symbol
-    ⌘+⌥+left click (over link)                              Open a symbol on the side
+    ⌘+⌥+[                                                 Collapses region
+    ⌘+⌥+]                                                 Expands region
+    ⌘+⌥+↑                                                 Inserts cursor above selection
+    ⌥+shift+↑                                              Duplicates line up
+    ⌥+shift+↓                                              Duplicates line down
+    ⌥+shift+drag mouse                                     Column selection
+    ⌥+scroll mouse                                         Fast scroll
+    ⌘+t                                                    Go to fle, Go to symbol in Workspace (#symbol-name)
+    ⌘+d                                                    Quick open file
+    ⌘+left click (over link)                               Open a symbol
+    ⌘+⌥+left click (over link)                            Open a symbol on the side
 
     ./directory/**/*/{*.filetype,*.filetype,*.filetype}     Search multiple file types
 
@@ -194,14 +191,13 @@
     $ export <<VAR NAME>>=<<VAR VALUE>>     Exports global ENV variable
                                             (ex. export DATABASEURL=http://databaseurl/)
     $ taskkill -F -IM node.exe              Kill server process (windows)
-    $ sudo lsof -i :3000                    Finds process ID in port
+    $ sudo lsof -i :<PORT>                  Finds process ID in port
     $ kill -9 <<Process ID>>                Kills process
     $ rm -rf node_modules                   Removes all installed modules // clean project installation
     $ rm -rf .yarn/cache                    Removes yarn cache // clean project installation
     $ rm -rf .cache                         Removes cache // clean project installation
     $ rm -rf .git                           Removes git
     $ git rm -r --cached .                  Removes git cached files
-
 
     ---------------------------------------
     NPM
@@ -223,6 +219,23 @@
     $ npm link <<package>>                  To link to a symbolic module created with 'npm link'
     $ npm unlink                            unlink a project from a symbolic one
     $ npm run lint -- --fix                 Fix linting problems automatically
+    $ npm cache clean                       Cleans NPM cache
+
+    ------------------------------------
+    NPM - Debugging external library:
+    ------------------------------------
+    $ yarn build // Root directory of library to check
+    $ yarn pack // yarn command
+    $ npm pack --pack-destination . // Node command, Root directory, will generate a <<library>>.tgz in that folder.
+
+    Add the local file path from the generated .tgz file to the package.json file of the app you are working on
+
+    "dependencies": {
+        "<<library>>": "file:<<relative path to library>>",
+    },
+
+    Install and run
+
 
     ---------------------------------------
     YARN
@@ -277,6 +290,16 @@
     $ brew install <program name>           installs a program without UI (ex. NodeJS)
     $ brew list                             List installed apps
     $ brew list cask                        List installed apps with UI
+
+    ---------------------------------------
+    SSH KEYS
+    ---------------------------------------
+    $ eval "$(ssh-agent -s)"                                // init SSH agent
+    $ ssh-keygen -t ed25519 -C "youremail@email.com"        // Generate SSH key (id_ed25519 as file name)
+    $ ssh-keygen -t rsa -b 2048 -C "youremail@email.com"    // 2048-bit RSA
+    $ ssh-add ~/.ssh/id_ed25519                             // Add generated key to SSH agent
+    $ ssh-add -l -E sha256                                  // Check SSH added key fingerprint (must match GitHub one)
+
 
 //////////////////////////
 // VUE
@@ -474,6 +497,7 @@
     $ git add .                                         Add all files
     $ git add <file>                                    Adds specified file
     $ git commit -m "message"                           Commits file with specified message (In present tense)
+    $ git commit --amend                                Edits last commit messages
     $ git log                                           gets repository history
     $ q                                                 exits gits viewer
     $ git checkout                                      checkout
@@ -488,7 +512,7 @@
     $ git diff -w                                       Show differences ignoring white spaces
     $ git remote add origin [remote repo Url]           Adds remote Url repository to local repo
     $ git remote -v                                     Verifies remote repo Url
-    $ git push origin master                            Pushes all changes to empty remote repository
+    $ git push origin -u <branch name ex. master>       Pushes all changes to empty remote repository
     $ git branch <branch-name>                          Creates a new local branch
     $ git reset HEAD~1 --soft                           Remove commits and stage them
     $ git reset --hard <commit name>                    Resets to the specified commit
@@ -498,6 +522,9 @@
     $ git push origin <<branch name>> --force-with-lease  Safe pushing
     $ git remote set-url origin <git URL>               Change remote origin
     $ git rebase -i HEAD~3                              Interactive rebase with no remote
+    $ git merge --no-commit <branch name>               Merge branch and stash changes
+    $ git branch -a                                     List all branches
+    $ git log                                           List all commits
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
@@ -587,7 +614,7 @@
     ------------------------------------
     GIT - Solving conflicts after Pull Request
     ------------------------------------
-    $ git branch // list of branches
+    $ git branch // list of branches -r for remote ones
     $ git checkout development // or whatever the origin branch was
     $ git pull // to update source branch
     $ git checkout -b <<local fix branch name>> // create a temporary branch from the updated source one
