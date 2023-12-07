@@ -79,7 +79,6 @@
     ⌘+shift+del                     Deletes a file permanently
 
 
-
 //////////////////////////
 // COMMAND LINE
 //////////////////////////
@@ -168,7 +167,6 @@
 
     Install and run
 
-
     ---------------------------------------
     YARN
     ---------------------------------------
@@ -181,10 +179,10 @@
     $ yarn global remove <package-name>                         Removes global package
     $ npm config set registry https://registry.npmjs.org/       Change registry for packages installation
     $ yarn set version stable                                   Updates yarn to latest version
-    $ yarn set version berry                                    Updates yarn to latest version (using node_modules)
+    $ yarn set version berry                                    Updates yarn to latest version
     $ yarn set version 1.22.19                                  Updates yarn classic to latest version (1.22.19)
     $ yarn cache clean                                          Cleans Yarn cache
-
+    $ yarn dlx @yarnpkg/sdks vscode                             Installs VScode support for Yarn > 2
     ---------------------------------------
     NVM
     ---------------------------------------
@@ -214,9 +212,11 @@
     $tsc --experimentalDecorators           Allows use of experimental decorators
 
     ---------------------------------------
-    CREATE-REACT-APP
+    APP-SCAFFOLDING
     ---------------------------------------
-    $ create-react-app . --scripts-version=react-scripts-ts                Creates a React App using TypeScript. "." uses current folder.
+    $ npx create-react-app .                Creates in place a React Webpack based app // https://create-react-app.dev/
+    $ yarn create next-app .                Creates in place a Nextjs Webpack based app // https://nextjs.org/docs/pages/api-reference/create-next-app
+    $ yarn create vite .                    Creates in place a Vite based app // https://github.com/vitejs/vite/tree/main/packages/create-vite
 
     ---------------------------------------
     HOMEBREW
@@ -298,6 +298,7 @@
     $ git remote show                                                                   Shows wxisting local remotes
     $ git merge <branch-to-merge>                                                       Merges branch into the current working branch
     $ git push <remote-local-name> <source-branch>:<destination-branch>                 Pushes branch into another
+    $ git branch --delete <branch-to-delete>                                            Deletes local branch
 
     ------------------------------------
     GIT - Rebasing ignoring spaces

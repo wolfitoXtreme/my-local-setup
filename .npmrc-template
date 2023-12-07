@@ -1,0 +1,3 @@
+registry=https://registry-server/path-to-npm-artifactories
+_auth=base 64 USER:PASSWORD or Plain TOKEN
+always-auth=true

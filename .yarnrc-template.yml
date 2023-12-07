@@ -1,0 +1,4 @@
+nodeLinker: node-modules // or pnp if packages are compatible
+npmAlwaysAuth: true
+npmAuthIdent: base 64 USER:PASSWORD or Plain TOKEN
+npmRegistryServer: 'https://registry-server/path-to-npm-artifactories
