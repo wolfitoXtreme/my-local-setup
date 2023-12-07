@@ -59,7 +59,7 @@
   },
   "workbench.activityBar.visible": true,
   "workbench.statusBar.visible": true,
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.enablePreview": true,
   "workbench.colorTheme": "Visual Studio Dark",
@@ -105,6 +105,7 @@
     "**/node_modules": false
   },
   "cSpell.userWords": [
+    "stylelint",
     "transpiling"
   ],
   "typescript.updateImportsOnFileMove.enabled": "always",
