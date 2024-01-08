@@ -11,6 +11,7 @@
     shift+ctrl+RIGHT                                        Select word by word
     ctrl+shift+[                                            Collapses region
     ctrl+shift+]                                            Expands region
+    shift+alt+F                                             Formats document (language based)
 
     // MAC OS
     ⌘+⌥+[                                                 Collapses region
@@ -25,7 +26,6 @@
     ⌘+left click (over link)                               Open a symbol
     ⌘+⌥+left click (over link)                            Open a symbol on the side
     ./directory/**/*/{*.filetype,*.filetype,*.filetype}     Search multiple file types
-
 
 //////////////////////////
 // SASS
@@ -279,10 +279,14 @@
     $ git diff <file-name>                                                              Show differences for a specific file
     $ git diff -w                                                                       Show differences ignoring white spaces
     $ git remote add origin [remote repo Url]                                           Adds remote Url repository to local repo
+    $ git remote set-url origin [remote repo Url]                                       Changes remote Url
     $ git remote -v                                                                     Verifies remote repo Url
     $ git push origin master                                                            Pushes branch
+    $ git push --set-upstream origin master                                             Sets upstream origin
     $ git push origin -u <branch name ex. master>                                       Pushes all changes to empty remote branch
     $ git branch <branch-name>                                                          Creates a new local branch
+    $ git config --get user.name                                                        Gets user name
+    $ git config --get user.email                                                       Gets user e-mail
     $ git reset HEAD~1 --soft                                                           Remove commits and stage them
     $ git reset --hard <commit name>                                                    Resets to the specified commit
     $ git push --force                                                                  Forces changes
@@ -299,6 +303,7 @@
     $ git merge <branch-to-merge>                                                       Merges branch into the current working branch
     $ git push <remote-local-name> <source-branch>:<destination-branch>                 Pushes branch into another
     $ git branch --delete <branch-to-delete>                                            Deletes local branch
+    $ git config --get remote.origin.url                                                Gets remote origin url
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
