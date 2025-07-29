@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "yaruson.ascii-unicode-escape",
+    "streetsidesoftware.code-spell-checker",
+    "vunguyentuan.vscode-css-variables",
+    "alexkrechik.cucumberautocomplete",
+    "waderyan.gitblame",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "visualstudioexptteam.vscodeintellicode",
+    "christian-kohler.path-intellisense",
+    "gurumukhi.selected-lines-count",
+    "fvclaus.sort-json-array",
+    "sryze.uridecode",
+    "adamhartford.vscode-base64",
+    "stylelint.vscode-stylelint",
+    "simonsiefke.svg-preview",
+    "bradlc.vscode-tailwindcss",
+    "jackardios.vscode-css-to-tailwindcss",
+    "ms-vscode.sublime-keybindings"
+  ]
+}
