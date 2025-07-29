@@ -120,7 +120,8 @@
     $ node <filename>                       Executes file
     $ export <<VAR NAME>>=<<VAR VALUE>>     Exports global ENV variable
                                             (ex. export DATABASEURL=http://databaseurl/)
-    $ taskkill -F -IM node.exe              Kill server process (windows)
+    $ netstat -ano | findstr :<PORT>        Finds process (Windows)
+    $ taskkill -F -IM <Process ID or name>  Kill server process (windows)
     $ sudo lsof -i :<PORT>                  Finds process ID in port
     $ kill -9 <<Process ID>>                Kills process
     $ rm -rf node_modules                   Removes all installed modules // clean project installation
@@ -278,9 +279,6 @@
     $ git diff                                                                          Shows differences
     $ git diff <file-name>                                                              Show differences for a specific file
     $ git diff -w                                                                       Show differences ignoring white spaces
-    $ git remote add origin [remote repo Url]                                           Adds remote Url repository to local repo
-    $ git remote set-url origin [remote repo Url]                                       Changes remote Url
-    $ git remote -v                                                                     Verifies remote repo Url
     $ git push origin master                                                            Pushes branch
     $ git push --set-upstream origin master                                             Sets upstream origin
     $ git push origin -u <branch name ex. master>                                       Pushes all changes to empty remote branch
@@ -293,17 +291,22 @@
     $ git push --no-verify                                                              To not run tests while pushing
     $ git rm <file-name> --cached                                                       Removes cached files from tracking
     $ git push origin <<branch name>> --force-with-lease                                Safe pushing
-    $ git remote set-url origin <git URL>                                               Change remote origin
+    $ git config --get remote.origin.url                                                Gets remote origin url
     $ git rebase -i HEAD~3                                                              Interactive rebase with no remote
     $ git merge --no-commit <branch name>                                               Merge branch and stash changes
     $ git branch -a                                                                     List all branches
     $ git log                                                                           List all commits
-    $ git remote add <new-remote-name> https://remote-url/<path-to-repository>.git      Adds new remote
-    $ git remote show                                                                   Shows wxisting local remotes
     $ git merge <branch-to-merge>                                                       Merges branch into the current working branch
     $ git push <remote-local-name> <source-branch>:<destination-branch>                 Pushes branch into another
     $ git branch --delete <branch-to-delete>                                            Deletes local branch
-    $ git config --get remote.origin.url                                                Gets remote origin url
+    $ git remote add origin [remote repo Url]                                           Adds remote Url repository to local repo
+    $ git remote set-url origin [remote repo Url]                                       Changes remote Url
+    $ git remote -v                                                                     Verifies remote repo Url
+    $ git remote set-url origin <git URL>                                               Change remote origin
+    $ git remote add <new-remote-name> https://remote-url/<path-to-repository>.git      Adds new remote
+    $ git remote show                                                                   Shows existing local remotes
+    $ git remote rm <remote>                                                            Removes local remote
+    $ git rm -r --cached <folder/.>                                                     Removes git cached files.
 
     ------------------------------------
     GIT - Rebasing ignoring spaces
